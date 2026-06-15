@@ -1,0 +1,8 @@
+<UserControl x:Class="PointOfSale.Views.SaleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Register screen. Plan: product tiles on the left (with search + category
+         filter), and the cart + totals + charge button down the right side. -->
+    <Grid>
+    </Grid>
+</UserControl>

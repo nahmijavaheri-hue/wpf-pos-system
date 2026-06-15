@@ -1,0 +1,8 @@
+<UserControl x:Class="PointOfSale.Views.HistoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Sales screen. Plan: list of past transactions on one side, and the
+         receipt / line items for the selected one on the other. -->
+    <Grid>
+    </Grid>
+</UserControl>
