@@ -2,7 +2,13 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!-- Register screen. Plan: product tiles on the left (with search + category
-         filter), and the cart + totals + charge button down the right side. -->
-    <Grid>
+         filter), and the cart + totals + charge button down the right side.
+         For now it's just a placeholder title so I can see navigation working. -->
+    <Grid Margin="32">
+        <StackPanel VerticalAlignment="Top">
+            <TextBlock Text="Register" FontSize="26" FontWeight="Bold" Foreground="{StaticResource TextBrush}"/>
+            <TextBlock Text="This is where I'll build the cart and checkout." FontSize="14"
+                       Foreground="{StaticResource MutedBrush}" Margin="0,4,0,0"/>
+        </StackPanel>
     </Grid>
 </UserControl>

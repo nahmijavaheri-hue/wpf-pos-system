@@ -2,7 +2,12 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!-- Items screen. Plan: a grid/list of all products on one side and an
-         add/edit form on the other. -->
-    <Grid>
+         add/edit form on the other. Placeholder for now. -->
+    <Grid Margin="32">
+        <StackPanel VerticalAlignment="Top">
+            <TextBlock Text="Items" FontSize="26" FontWeight="Bold" Foreground="{StaticResource TextBrush}"/>
+            <TextBlock Text="This is where I'll manage the product catalog." FontSize="14"
+                       Foreground="{StaticResource MutedBrush}" Margin="0,4,0,0"/>
+        </StackPanel>
     </Grid>
 </UserControl>

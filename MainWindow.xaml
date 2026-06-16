@@ -1,12 +1,36 @@
-﻿<Window x:Class="PointOfSale.MainWindow"
+<Window x:Class="PointOfSale.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PointOfSale"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Point of Sale" Height="720" Width="1100"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BgBrush}">
 
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>   <!-- sidebar -->
+            <ColumnDefinition Width="*"/>     <!-- screen area -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Left sidebar with the app name and the three nav buttons -->
+        <Border Grid.Column="0" Background="{StaticResource SidebarBrush}">
+            <StackPanel Margin="0,26,0,0">
+                <StackPanel Margin="20,0,20,28">
+                    <TextBlock Text="◆ POS" Foreground="White" FontSize="24" FontWeight="Bold"/>
+                    <TextBlock Text="Point of Sale" Foreground="#7E92B0" FontSize="13" Margin="0,2,0,0"/>
+                </StackPanel>
+
+                <!-- GroupName makes them behave like tabs - only one active at a time.
+                     Click handlers are in the code-behind and swap the screen. -->
+                <RadioButton x:Name="NavRegister" Style="{StaticResource NavButton}" GroupName="nav"
+                             Content="🛒   Register" IsChecked="True" Checked="NavRegister_Checked"/>
+                <RadioButton x:Name="NavItems" Style="{StaticResource NavButton}" GroupName="nav"
+                             Content="📦   Items" Checked="NavItems_Checked"/>
+                <RadioButton x:Name="NavSales" Style="{StaticResource NavButton}" GroupName="nav"
+                             Content="📈   Sales" Checked="NavSales_Checked"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Whatever screen is active gets shown here -->
+        <ContentControl x:Name="ScreenArea" Grid.Column="1"/>
     </Grid>
 </Window>
